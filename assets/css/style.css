@@ -8,6 +8,69 @@ html, body {
     width: 100%;
 }
 
+/*CheckBox*/
+#body {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.containerBtn {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    font-size: 20pt;
+    font-family: Digital, sans-serif;
+}
+
+.toggler-wrapper {
+  display: block;
+  width: 45px;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+  background-color: rgb(93, 211, 93);
+}
+
+.toggler-wrapper .toggler-slider {
+  background-color: #405b57;
+  position: absolute;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+  position: absolute;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+    left: calc(100% - 19px - 3px);
+}
+
+.toggler-wrapper.style-1 .toggler-knob {
+    width: calc(25px - 6px);
+    height: calc(25px - 6px);
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    background-color: #fff;
+}
+
+/*Clock*/
 #container {
     position: absolute;
     top: 50%;
@@ -51,12 +114,13 @@ html, body {
     border: solid 5px #000;
 }
 
+/*DarkMode*/
 .lightMode {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
 }
 
 .darkMode {
-    background-image: linear-gradient( 94.3deg,  rgb(10, 14, 34) 10.9%, rgb(19, 19, 26) 87.1% );
+    background-image: linear-gradient( 94.3deg,  rgb(12, 12, 12) 10.9%, rgb(9, 9, 20) 87.1% );
 }
 
 .day {
@@ -67,4 +131,8 @@ html, body {
 .night {
     background-color: rgb(93, 211, 93);
     box-shadow: rgb(93, 211, 93) 0px 0px 50px;
+}
+
+.color {
+    color: rgb(93, 211, 93);
 }

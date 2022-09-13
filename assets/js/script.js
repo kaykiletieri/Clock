@@ -25,3 +25,16 @@ const relogio = setInterval(function time(){
     minutos.textContent = min;
     segundos.textContent = seg;
 });
+
+//Darkmode
+const display = document.querySelector("#display");
+const body = document.querySelector("#body");
+const label = document.querySelector("#label");
+
+function darkMode() {
+    display.classList.toggle("day");
+    display.classList.toggle("night");
+    body.classList.toggle("lightMode");
+    body.classList.toggle("darkMode");
+    label.classList.toggle("color")
+}
