@@ -11,7 +11,7 @@
 </head>
 <body id="body" class="lightMode">
     <div class="containerBtn">
-    <label id="label">Darkmode</label>
+        <label id="label">Darkmode</label>
         <label class="toggler-wrapper style-1">
             <input type="checkbox" onclick="darkMode()">
             <div class="toggler-slider">
@@ -20,8 +20,13 @@
         </label>
     </div>
 
+    <h1 id="title">Relógio Digital</h1>
+
     <div id="container">
-        <div id="detalhe"></div>
+        <span id="detalhe">
+            <div></div>
+            <div></div>
+        </span>
         <div id="relogio">
             <div id="display" class="day">
                 <div>
@@ -37,6 +42,10 @@
                 </div>
             </div>
         </div>
+        <span id="pes">
+            <div></div>
+            <div></div>
+        </span>
     </div>
 
     <script src="./assets/js/script.js"></script>

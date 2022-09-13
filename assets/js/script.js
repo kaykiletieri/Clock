@@ -30,6 +30,7 @@ const relogio = setInterval(function time(){
 const display = document.querySelector("#display");
 const body = document.querySelector("#body");
 const label = document.querySelector("#label");
+const title = document.querySelector("#title")
 
 function darkMode() {
     display.classList.toggle("day");
@@ -37,4 +38,5 @@ function darkMode() {
     body.classList.toggle("lightMode");
     body.classList.toggle("darkMode");
     label.classList.toggle("color")
+    title.classList.toggle("color")
 }
